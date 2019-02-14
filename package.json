@@ -1,25 +1,15 @@
 {
   "name": "video-manager",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "vale75020 <valentinosuma@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "scripts":{
+    "start:client":"cd client && yarn start",
+    "start:server": "cd server && yarn start",
+    "start": "concurrently --kill-others-on-fail \"yarn start:client\" \"yarn start:server\""
+  }
 }
