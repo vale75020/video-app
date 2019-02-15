@@ -7,9 +7,12 @@
   "devDependencies": {
     "concurrently": "^4.1.0"
   },
-  "scripts":{
-    "start:client":"cd client && yarn start",
+  "scripts": {
+    "start:client": "cd client && yarn start",
     "start:server": "cd server && yarn start",
     "start": "concurrently --kill-others-on-fail \"yarn start:client\" \"yarn start:server\""
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2"
   }
 }

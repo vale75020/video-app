@@ -3,7 +3,7 @@ const app = express();
 
 const port = 5000
 
-var morgan = require ('morgan');
+var morgan = require ('morgan'); //Morgan is used for logging request details
 
 app.use(morgan('tiny'));
 
@@ -32,21 +32,21 @@ let SerieSchema = new Schema({
 let Video = mongoose.model("Video", VideoSchema);
 let Serie = mongoose.model("Serie", SerieSchema);
 
-// let v = new Video({
-//     title:  "My first video title",
-//     description: "a video test for my DB",
-//     hashtags: "my hashtag",
-//     url:   "http://myfirstvideo.com" 
-// });
+// // let v = new Video({
+// //     title:  "My first video title",
+// //     description: "a video test for my DB",
+// //     hashtags: "my hashtag",
+// //     url:   "http://myfirstvideo.com" 
+// // });
 
-// v.save();
+// // v.save();
 
-// Video.find(function(err, docs){
-//   console.log(docs)
-// })
+// // Video.find(function(err, docs){
+// //   console.log(docs)
+// // })
 
 app.get('/', function (req, res) {
-
+  console.log("GET /")
   res.send('Hello World!')
 })
 
