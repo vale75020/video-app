@@ -11,9 +11,11 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import VideoDetails from "./components/VideoDetails";
+
 
 const About = () => <h2>About</h2>;
-const Users = () => <h2>Users</h2>;
+//const Users = () => <h2>Users</h2>;
 
 const styles = {
   root: {
@@ -38,11 +40,11 @@ class AppComponent extends Component {
           <AppBar position="static" color="default">
             <Toolbar>
             <Typography variant="h6" color="inherit" className={classes.grow}>
-            <Button color="inerith" component={Link} to="/">
+            <Button color="inherit" component={Link} to="/">
             Home
             </Button>
               </Typography>
-              <Button color="inerith" component={Link} to="/about/">
+              <Button color="inherit" component={Link} to="/about/">
                 About
               </Button>
             </Toolbar>
@@ -50,7 +52,7 @@ class AppComponent extends Component {
          
           <Route path="/" exact component={Home} />
           <Route path="/about/" component={About} />
-          <Route path="/users/" component={Users} />
+          <Route path="/videos/:id" exact component={VideoDetails} />
           
         </div>
       </Router>

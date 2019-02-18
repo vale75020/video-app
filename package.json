@@ -13,6 +13,7 @@
     "start": "concurrently --kill-others-on-fail \"yarn start:client\" \"yarn start:server\""
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.2"
+    "@material-ui/core": "^3.9.2",
+    "cors": "^2.8.5"
   }
 }
